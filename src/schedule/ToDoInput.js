@@ -5,6 +5,8 @@ import uuid from 'uuid/v4'
 const ToDoInput =()=>{
     const [todo, setTodo] = useState("")
     const dispatch = useDispatch()
+    //useDispatch 은 Context 에 포함된 dispatch 를 가져올 수 있다. 이 dispatch 를 이용해 action 을 발생시킨다.
+
     const addTodo = todo => dispatch(addTodoAction(todo))
     const handleChange = e =>{
         e.preventDefault()

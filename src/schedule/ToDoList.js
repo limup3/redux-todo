@@ -4,6 +4,7 @@ import {toggleTodoAction, deleteTodoAction} from './store/schedule.action'
 
 const ToDoList =()=>{
     const todos = useSelector(state => state.todos)
+    //useSelector 은 selector function 을 전달하여, Context 에 포함된 state 를 가져올 수 있다.
     const dispatch = useDispatch()
     const toggleTodo = todoId => dispatch(toggleTodoAction(todoId))
     const deleteTodo = todoId => dispatch(deleteTodoAction(todoId))

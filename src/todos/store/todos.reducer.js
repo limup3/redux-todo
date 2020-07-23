@@ -32,7 +32,7 @@ const initialState = {
 }
 
 //리듀서
-const todos = handleActions({
+const todosReducer = handleActions({
 
     [CHANGE_INPUT]: (state, {payload: input})=> produce(state, x => {x.input = input}),
     [INSERT]: (state, {payload: todo})=> produce(state, draft => {draft.todos.push(todo)}),
@@ -44,4 +44,4 @@ const todos = handleActions({
                                  draft.todos.splice(index, 1)})
 }, initialState)
 
-export default todos
+export default todosReducer
